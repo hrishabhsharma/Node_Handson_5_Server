@@ -25,7 +25,7 @@ io.on("connection",(client)=>{
         }
         arr.push(Data)
         client.join("Hrep")
-        io.to("Hrep").emit("TotalMembers",Data)
+        client.to("Hrep").emit("TotalMembers",Data)
 
         // client.emit("TotalMembers",Data)
         // client.join("Hrep")
