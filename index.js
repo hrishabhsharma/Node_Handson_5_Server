@@ -24,7 +24,10 @@ io.on("connection",(client)=>{
             User : data
         }
         arr.push(Data)
-        client.broadcast.emit("TotalMembers",arr)
+        client.join("Hrep")
+        io.to("Hrep").emit("TotalMembers",Data)
+
+        // client.emit("TotalMembers",Data)
         // client.join("Hrep")
         // client.on("VERIFY",(data)=>{
         //     const Temp = {
